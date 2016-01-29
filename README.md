@@ -1,17 +1,38 @@
-# (future) BioPAX site 
+# BioPAX.org
+(http://biopax.github.io)
 
-http://biopax.github.io
+Biological Pathways Exchange (BioPAX) is a standard language that aims to enable integration, exchange, visualization and analysis of biological pathway data. Specifically, BioPAX supports data exchange between pathway data groups and thus reduces the complexity of interchange between data formats by providing an accepted standard format for pathway data. It is an open and collaborative effort by the community of researchers, software developers, and institutions. BioPAX is defined in [OWL DL](http://www.w3.org/TR/owl-features/) and is represented in the RDF/XML format. [BioPAX Paper](http://www.nature.com/nbt/journal/v28/n9/full/nbt.1666.html) was published in Nature Biotechnology in 2010.
 
-The BioPAX.org web site lived at CBIO MSKCC until 2013.
-Then, it was moved to the BioPAX project on Sourceforge (project-web, 
-accessible via biopax.sf.net), and its configuration and core pages were 
-saved in [the Mercurial repository](http://hg.code.sf.net/p/biopax/site).
+## "Hello World" example:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xml:base="">
+<owl:Ontology rdf:about="">
+ <owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl#" />
+</owl:Ontology>
+  <bp:Protein rdf:about="http://my.example.com/biopax#HelloWorld">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hello World!</bp:displayName>
+  </bp:Protein>
+</rdf:RDF>
+```
 
-BioPAX.org still resides on Sourceforge (www.biopax.org, biopax.org = biopax.sf.net).
+## Links:
+* BioPAX ontology and documentation [releases](http://www.biopax.org/release/)
+* BioPAX secification [sub-project](https://github.com/BioPAX/specification)
+* BioPAX model [examples](https://github.com/BioPAX/specification/blob/master/Level3/examples/)
+* BioPAX [archive and downloads](http://www.biopax.org/downloads/biopax/)
+ 
+## PS:
+Official BioPAX web site www.biopax.org has been at CBIO MSKCC until 2013; 
+then it moved to Sourceforge (Project-Web hosting, biopax.sf.net) and still resides there. 
+Site configuration and some static content are stored in the Hg [repository](http://hg.code.sf.net/p/biopax/site).
+And we are thinking of a better design (not using .htaccess, MediaWiki and PHP) and migrating here.
 
-Once we come up with a new design (not using .htaccess and PHP) 
-and relocate or remove some of exisiting content, such as old wiki, 
-file downloads, Maven-generated documentation (Paxtools' and Validator's), 
-Maven repositories, and update the DNS configuration, 
-the new BioPAX site will be probably hosted here on GitHub.
 
+Sincerely yours,
+
+BioPAX team.
