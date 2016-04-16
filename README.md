@@ -22,6 +22,7 @@ Biological Pathways Exchange (BioPAX) is a standard language that aims to enable
 
 ## Links:
 * BioPAX ontology and documentation [releases](http://www.biopax.org/release/)
+* BioPAX ontology [visualization](http://vowl.visualdataweb.org/webvowl/#iri=http://www.biopax.org/release/biopax-level3.owl) using WebVOWL (cool!)
 * BioPAX secification [sub-project](https://github.com/BioPAX/specification)
 * BioPAX model [examples](https://github.com/BioPAX/specification/blob/master/Level3/examples/)
 * BioPAX [archive and downloads](http://www.biopax.org/downloads/biopax/)
