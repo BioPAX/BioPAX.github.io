@@ -1,7 +1,7 @@
 ---
 redirect_from: 
- - "/validator"
  - "/biopax-validator"
+ - "/biopax-validator/"
 redirect_to: 
- - http://biopax.baderlab.org
+ - http://biopax.baderlab.org/
 ---
