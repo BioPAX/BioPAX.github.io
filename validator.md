@@ -1,5 +1,4 @@
 ---
-permalink: /Validator
 redirect_from: 
  - "/validator"
  - "/biopax-validator"
