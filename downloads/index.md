@@ -5,6 +5,6 @@ redirect_from:
  - "/Downloads"
  - "/download"
  - "/Download"
-redirect: http://sourceforge.net/projects/biopax/files/
-layout: redirect
+redirect_to: 
+ - http://sourceforge.net/projects/biopax/files/
 ---
