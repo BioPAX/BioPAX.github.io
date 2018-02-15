@@ -20,7 +20,7 @@
     <header>
       <div class="inner">
         <h1>BioPAX</h1>
-        <h2>Biological Pathways Exchange language (RDF/XML)</h2>
+        <h2>Biological Pathway Exchange</h2>
         <a href="https://github.com/BioPAX" class="button"><small>Follow me on</small> GitHub</a>
       </div>
     </header>
@@ -28,81 +28,71 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h1>
-<a id="biopaxorg" class="anchor" href="#biopaxorg" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span>
-</a>BioPAX.org</h1>
 
-<p>(biopax.github.io)</p>
+          <p>Biological Pathway Exchange (BioPAX) is a standard language that aims to enable integration, exchange, visualization and analysis 
+          of biological pathway data. Specifically, BioPAX supports data exchange between pathway data groups and thus reduces the complexity 
+          of interchange between data formats by providing an accepted standard format for pathway data. It is an open and collaborative effort 
+          by the community of researchers, software developers, and institutions. BioPAX is defined in 
+          <a href="http://www.w3.org/TR/owl-features/">OWL DL</a> and is represented in the RDF/XML format. For more details, see 
+          <a href="http://www.nature.com/nbt/journal/v28/n9/full/nbt.1666.html">Demir E <em>et al.</em> 2010. The BioPAX community standard for pathway data sharing, Nature Biotechnology. 28(9)</a>.
+          </p>          
+          
+          <h2><a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link">
+          </span></a>Links:</h2>
 
-<p>Biological Pathways Exchange (BioPAX) is a standard language that aims to enable integration, exchange, visualization and analysis 
-of biological pathway data. Specifically, BioPAX supports data exchange between pathway data groups and thus reduces the complexity 
-of interchange between data formats by providing an accepted standard format for pathway data. It is an open and collaborative effort 
-by the community of researchers, software developers, and institutions. BioPAX is defined in 
-<a href="http://www.w3.org/TR/owl-features/">OWL DL</a> and is represented in the RDF/XML format. 
-<a href="http://www.nature.com/nbt/journal/v28/n9/full/nbt.1666.html">BioPAX Paper</a> was published in Nature Biotechnology in 2010.
-</p>
+          <ul>
+            <li>BioPAX ontology and documentation <a href="http://www.biopax.org/release/">releases</a></li>
+            <li>Specification <a href="https://github.com/BioPAX/specification">development</a></li>
+            <li>Model <a href="https://github.com/BioPAX/specification/blob/master/Level3/examples/">examples</a></li>
+            <li>View BioPAX  
+              <ul>
+                <li><a href="http://webprotege.stanford.edu/#Edit:projectId=0047e89b-3018-4a7e-a725-ff78e3f497bb">WebProtege</a></li>
+                <li><a href="http://www.biopax.org/owldoc/Level3/">OWLdoc</a></li>
+                <li><a href="http://vowl.visualdataweb.org/webvowl/#iri=http://www.biopax.org/release/biopax-level3.owl">WebVOWL</a></li>                    
+              </ul>
+            <li><a href="http://www.biopax.org/downloads/biopax/">Archive and downloads</a></li>
+            <li><a href="https://groups.google.com/forum/#!forum/biopax-discuss">Google group</a></li>
+            <li><a href="http://www.biopax.org/wiki/">Wiki (archive)</a></li>
+            <li><a href="http://www.biopax.org/validator">BioPAX validator</a></li>
+            <li>BioPAX <a href="http://co.mbine.org/standards/biopax">at COMBINE</a></li>
+          </ul>
 
-<h2>SAB</h2>
-<p>
-The current scientific advisory board (SAB) members are:
-<li><a href="http://baderlab.org/GaryBader">Gary Bader</a>, University of Toronto</li>
-<li><a href="http://www.med.nyu.edu/people/P.DEustachio.html">Peter D'Eustachio</a>, New York University</li>
-<li><a href="http://www.ebi.ac.uk/~hhe/">Henning Hermjakob</a>, European Bioinformatics Institute</li>
-<li><a href="http://www.ebi.ac.uk/compneur-srv/">Nicolas LeNovere</a>, European Bioinformatics Institute</li>
-<li><a href="http://www.ai.sri.com/pkarp/">Peter Karp</a>, SRI International</li>
-<li><a href="http://sanderlab.org/">Chris Sander</a>, cBio,  Memorial Sloan-Kettering Cancer Center (MSKCC), 
-Dana-Farber Cancer Center (DFCI), Harvard Medical School (HMS)</li>
-</p>
+          <h2>
+            <a id="hello-world-example" class="anchor" href="#hello-world-example" aria-hidden="true">
+            <span aria-hidden="true" class="octicon octicon-link"></span></a>"Hello World" example:
+          </h2>
 
-<h2>
-<a id="hello-world-example" class="anchor" href="#hello-world-example" aria-hidden="true">
-  <span aria-hidden="true" class="octicon octicon-link"></span></a>"Hello World" example:
-</h2>
+          <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+          &lt;rdf:RDF
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+          xmlns:owl="http://www.w3.org/2002/07/owl#"
+          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+          xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xml:base=""&gt;
+          &lt;owl:Ontology rdf:about=""&gt;
+          &lt;owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl#" /&gt;
+          &lt;/owl:Ontology&gt;
+            &lt;bp:Protein rdf:about="http://my.example.com/biopax#HelloWorld"&gt;
+              &lt;bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"&gt;Hello World!&lt;/bp:displayName&gt;
+            &lt;/bp:Protein&gt;
+          &lt;/rdf:RDF&gt;
+          </code></pre>
+    
 
-<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;rdf:RDF
- xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
- xmlns:owl="http://www.w3.org/2002/07/owl#"
- xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
- xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xml:base=""&gt;
-&lt;owl:Ontology rdf:about=""&gt;
- &lt;owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl#" /&gt;
-&lt;/owl:Ontology&gt;
-  &lt;bp:Protein rdf:about="http://my.example.com/biopax#HelloWorld"&gt;
-    &lt;bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"&gt;Hello World!&lt;/bp:displayName&gt;
-  &lt;/bp:Protein&gt;
-&lt;/rdf:RDF&gt;
-</code></pre>
+          <h2>Scientific Advisory Board</h2>
+          <p>
+          <li><a href="http://baderlab.org/GaryBader">Gary Bader</a>, University of Toronto</li>
+          <li><a href="http://www.med.nyu.edu/people/P.DEustachio.html">Peter D'Eustachio</a>, New York University</li>
+          <li><a href="http://www.ebi.ac.uk/~hhe/">Henning Hermjakob</a>, European Bioinformatics Institute</li>
+          <li><a href="http://www.ebi.ac.uk/compneur-srv/">Nicolas LeNovere</a>, European Bioinformatics Institute</li>
+          <li><a href="http://www.ai.sri.com/pkarp/">Peter Karp</a>, SRI International</li>
+          <li><a href="http://sanderlab.org/">Chris Sander</a> Harvard University</li>
+          </p>
 
-<h2><a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link">
-</span></a>Links:</h2>
+          <h2><a id="ps" class="anchor" href="#ps" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BioPAX.org Hosting</h2>
 
-<ul>
-<li>BioPAX ontology and documentation <a href="http://www.biopax.org/release/">releases</a></li>
-<li>BioPAX secification <a href="https://github.com/BioPAX/specification">development</a></li>
-<li>BioPAX model <a href="https://github.com/BioPAX/specification/blob/master/Level3/examples/">examples</a></li>
-<li>View BioPAX with <a href="http://webprotege.stanford.edu/#Edit:projectId=0047e89b-3018-4a7e-a725-ff78e3f497bb">webprotege</a></li>
-<li>View BioPAX with <a href="http://www.biopax.org/owldoc/Level3/">owldoc</a></li>
-<li>View BioPAX with <a href="http://vowl.visualdataweb.org/webvowl/#iri=http://www.biopax.org/release/biopax-level3.owl">webvowl</a></li>
-<li>View a BioPAX class, e.g., <a href="http://www.biopax.org/level3/BiochemicalReaction">BiochemicalReaction</a> (via Virtuoso, RDF)</li>
-<li>BioPAX <a href="http://www.biopax.org/downloads/biopax/">archive and downloads</a></li>
-<li>BioPAX <a href="https://groups.google.com/forum/#!forum/biopax-discuss">forum</a> (biopax-discuss - Google group)</li>
-<li>BioPAX <a href="http://www.biopax.org/wiki/">Wiki (archive)</a></li>
-<li>BioPAX <a href="http://www.biopax.org/validator">validator</a></li>
-<li>BioPAX <a href="http://co.mbine.org/standards/biopax">at COMBINE</a></li>
-</ul>
-
-<h2><a id="ps" class="anchor" href="#ps" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PS:</h2>
-
-<p>Official BioPAX web site <a href="http://www.biopax.org">www.biopax.org</a> has been at CBIO MSKCC until 2013; 
-then it moved to Sourceforge (Project-Web hosting, biopax.sf.net) and still resides there. 
-Site configuration and some static content are stored in the Hg <a href="http://hg.code.sf.net/p/biopax/site">repository</a>.
-And we are thinking of a better design (not using .htaccess, MediaWiki and PHP) and migrating here.</p>
-
-<p>Sincerely yours,</p>
-<p>BioPAX team.</p>
-
-</section>
+          <p>The official BioPAX site <a href="http://www.biopax.org">www.biopax.org</a> is hosted by Sourceforge (Project-Web hosting, biopax.sf.net). Site configuration and some static content are stored in the Hg <a href="http://hg.code.sf.net/p/biopax/site">repository</a>.
+          Plans are in place to migrate the official site.</p>          
+         </section>
 
         <aside id="sidebar">
           <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
@@ -110,16 +100,16 @@ And we are thinking of a better design (not using .htaccess, MediaWiki and PHP) 
       </div>
     </div>
 
-            <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-43341809-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+      <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-43341809-1");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
 
   </body>
 </html>
