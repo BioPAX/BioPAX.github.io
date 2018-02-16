@@ -29,9 +29,9 @@ Biological Pathways Exchange (BioPAX) is a standard language that aims to enable
  
 ## PS:
 Official BioPAX web site www.biopax.org has been at CBIO MSKCC until 2013; 
-then it moved to Sourceforge (Project-Web hosting, biopax.sf.net) and still resides there. 
-Site configuration and some static content are stored in the Hg [repository](http://hg.code.sf.net/p/biopax/site).
-And we are thinking of a better design (not using .htaccess, MediaWiki and PHP) and migrating here.
+then it moved to Sourceforge (Project-Web hosting, biopax.sf.net), and  
+its configuration and some content were in the Hg [repository](http://hg.code.sf.net/p/biopax/site).
+Now, we are migrating from Sourceforge.
 
 
 Sincerely yours,
