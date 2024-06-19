@@ -8,12 +8,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <title>BioPAX (on Github)</title>
+    <title>BioPAX</title>
   </head>
 
   <body>
@@ -29,32 +24,32 @@
       <div class="inner clearfix">
         <section id="main-content">
 
-          <p>Biological Pathway Exchange (BioPAX) is a standard language that aims to enable integration, exchange, visualization and analysis 
-          of biological pathway data. Specifically, BioPAX supports data exchange between pathway data groups and thus reduces the complexity 
-          of interchange between data formats by providing an accepted standard format for pathway data. It is an open and collaborative effort 
-          by the community of researchers, software developers, and institutions. BioPAX is defined in 
-          <a href="http://www.w3.org/TR/owl-features/">OWL DL</a> and is represented in the RDF/XML format. For more details, see 
-          <a href="http://www.nature.com/nbt/journal/v28/n9/full/nbt.1666.html">Demir E <em>et al.</em> 2010. The BioPAX community standard for pathway data sharing, Nature Biotechnology. 28(9)</a>.
-          </p>          
-          
+          <p>Biological Pathway Exchange (BioPAX) is a standard language that aims to enable integration, exchange, visualization and analysis
+          of biological pathway data. Specifically, BioPAX supports data exchange between pathway data groups and thus reduces the complexity
+          of interchange between data formats by providing an accepted standard format for pathway data. It is an open and collaborative effort
+          by the community of researchers, software developers, and institutions. BioPAX is defined in
+          <a href="https://www.w3.org/TR/owl-features/">OWL DL</a> and is represented in the RDF/XML format. For more details, see
+          <a href="https://www.nature.com/nbt/journal/v28/n9/full/nbt.1666.html">Demir E <em>et al.</em> 2010. The BioPAX community standard for pathway data sharing, Nature Biotechnology. 28(9)</a>.
+          </p>
+
           <h2><a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link">
           </span></a>Links:</h2>
 
           <ul>
-            <li>BioPAX ontology and documentation <a href="http://www.biopax.org/release/">releases</a></li>
-            <li>Specification <a href="https://github.com/BioPAX/specification">development</a></li>            
-            <li><a href="http://www.biopax.org/downloads/biopax/">Archive and downloads</a></li>
+            <li>BioPAX ontology and documentation <a href="https://www.biopax.org/release/">releases</a></li>
+            <li>Specification <a href="https://github.com/BioPAX/specification/">development</a></li>
+            <li><a href="https://www.biopax.org/downloads/biopax/">Archive and downloads</a></li>
             <li><a href="https://groups.google.com/forum/#!forum/biopax-discuss">Google group</a></li>
-            <li><a href="http://www.biopax.org/mediawiki">Wiki (archive)</a></li>
-            <li><a href="http://www.biopax.org/validator">BioPAX validator</a></li>
-            <li><a href="http://co.mbine.org/standards/biopax">BioPAX @ COMBINE</a></li>
-            <li>View BioPAX via  
+            <li><a href="https://www.biopax.org/wiki/">Wiki (archive)</a></li>
+            <li><a href="https://www.biopax.org/validator/">BioPAX validator</a></li>
+            <li><a href="https://co.mbine.org/standards/">BioPAX @ COMBINE</a></li>
+            <li>View BioPAX via
                 <ul>
                   <li><a href="https://webprotege.stanford.edu/#projects/0047e89b-3018-4a7e-a725-ff78e3f497bb">WebProtege</a>(requires an account)</li>
-                  <li><a href="http://www.biopax.org/owldoc/Level3/">OWLdoc</a></li>
-                  <li><a href="http://vowl.visualdataweb.org/webvowl/#iri=http://www.biopax.org/release/biopax-level3.owl">WebVOWL</a></li>                    
+                  <li><a href="https://www.biopax.org/owldoc/Level3/">OWLdoc</a></li>
+                  <li><a href="https://vowl.visualdataweb.org/webvowl/#iri=http://www.biopax.org/release/biopax-level3.owl">WebVOWL</a></li>
                 </ul>
-              </li>  
+              </li>
           </ul>
 
           <h2>
@@ -63,37 +58,37 @@
           </h2>
 
           <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-          &lt;rdf:RDF
-          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-          xmlns:owl="http://www.w3.org/2002/07/owl#"
-          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-          xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xml:base=""&gt;
-          &lt;owl:Ontology rdf:about=""&gt;
-          &lt;owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl#" /&gt;
-          &lt;/owl:Ontology&gt;
-            &lt;bp:Protein rdf:about="http://my.example.com/biopax#HelloWorld"&gt;
-              &lt;bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"&gt;Hello World!&lt;/bp:displayName&gt;
-            &lt;/bp:Protein&gt;
-          &lt;/rdf:RDF&gt;
+&lt;rdf:RDF
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xml:base=""&gt;
+&lt;owl:Ontology rdf:about=""&gt;
+&lt;owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl#" /&gt;
+&lt;/owl:Ontology&gt;
+  &lt;bp:Protein rdf:about="http://my.example.com/biopax#HelloWorld"&gt;
+    &lt;bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"&gt;Hello World!&lt;/bp:displayName&gt;
+  &lt;/bp:Protein&gt;
+&lt;/rdf:RDF&gt;
           </code></pre>
 
           <p>More examples <a href="https://github.com/BioPAX/specification/blob/master/Level3/examples/">examples</a><p></p>
-           
+
           <h2>Scientific Advisory Board</h2>
           <p>
-          <li><a href="http://baderlab.org/GaryBader">Gary Bader</a>, University of Toronto</li>
-          <li><a href="http://www.med.nyu.edu/people/P.DEustachio.html">Peter D'Eustachio</a>, New York University</li>
-          <li><a href="http://www.ebi.ac.uk/~hhe/">Henning Hermjakob</a>, European Bioinformatics Institute</li>
-          <li><a href="http://www.ebi.ac.uk/compneur-srv/">Nicolas LeNovere</a>, European Bioinformatics Institute</li>
-          <li><a href="http://www.ai.sri.com/pkarp/">Peter Karp</a>, SRI International</li>
-          <li><a href="http://sanderlab.org/">Chris Sander</a> Harvard University</li>
-          </p>                 
+          <li><a href="https://baderlab.org/GaryBader">Gary Bader</a>, University of Toronto</li>
+          <li><a href="https://med.nyu.edu/faculty/peter-g-d-eustachio">Peter D'Eustachio</a>, New York University</li>
+          <li><a href="https://www.ebi.ac.uk/people/person/henning-hermjakob/">Henning Hermjakob</a>, European Bioinformatics Institute</li>
+          <li><a href="https://www.ebi.ac.uk/compneur-srv/">Nicolas LeNovere</a>, European Bioinformatics Institute</li>
+          <li><a href="https://www.ai.sri.com/pkarp/">Peter Karp</a>, SRI International</li>
+          <li><a href="https://www.sanderlab.org/">Chris Sander</a> Harvard University</li>
+          </p>
+        </section>
 
-         </section>
         <aside id="sidebar">
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>
+            using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
         </aside>
-        
       </div>
     </div>
 
@@ -104,7 +99,7 @@
     <script type="text/javascript">
       try {
         var pageTracker = _gat._getTracker("UA-43341809-1");
-      pageTracker._trackPageview();
+        pageTracker._trackPageview();
       } catch(err) {}
     </script>
   </body>
